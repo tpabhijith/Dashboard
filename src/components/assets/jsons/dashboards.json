@@ -1,0 +1,12 @@
+[
+    {
+        "id":1,
+        "name":"Dashboard",
+        "tittle":"title object",
+        "dashboard_settings":{
+            "primary_color":"#000",
+            "secondary_color":"#fff"
+
+        }
+    }
+]

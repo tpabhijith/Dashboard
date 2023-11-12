@@ -1,0 +1,64 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.cover{
+    height: 93vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    width: 40%;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+}
+.top{
+    border-bottom: 1px solid #000;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0px;
+}
+.top h3{
+    font-size: 30px;
+}
+.bottom{
+    padding: 20px 0px;
+}
+.widget{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor:pointer;
+    margin-bottom: 10px;
+}
+.left{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.image-container{
+    width: 70px;
+    height: 70px;
+    border:1px solid #000;
+    border-radius: 10px;
+    background-color: antiquewhite;
+}
+.right{
+    display: flex;
+    gap: 20px;
+}
+.button_items{
+    width:100px;
+    height: 45px;
+    background-color: antiquewhite;
+    border-radius: 8px;
+}
+.add_button{
+    width:80px;
+    height: 45px;
+    border:1px solid #000;
+    border-radius: 8px;
+}
