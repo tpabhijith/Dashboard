@@ -13,16 +13,16 @@ const HomeScreen = () => {
         setModal(false);
     };
     const router = useRouter();
-    const [value, setValue] = useState("#ffffff");
     const [modal, setModal] = useState(false);
     const [selectedId, setSelectedId] = useState();
-    const [edit, setEdit] = useState(false);
     const [addModal, setAddModal] = useState(false);
     const { addLocal, dashboards, deleteDashboard } = usePostStore();
-    const handleChange = (newValue) => {
-        setValue(newValue);
-    };
-    const storedDashboards = JSON.parse(localStorage.getItem("dashboards"));
+
+    let storedDashboards = "";
+    useEffect(() => {
+        storedDashboards = JSON.parse(localStorage.getItem("dashboards"));
+    }, []);
+
     console.log(storedDashboards, "dash", dashboards);
     useEffect(() => {
         if (storedDashboards) {
