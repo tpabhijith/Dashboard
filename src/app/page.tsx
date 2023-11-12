@@ -3,7 +3,7 @@ import { HomeScreen } from "../screens";
 import { getServerSideProps } from "../components/assets/utils/StoreData";
 
 export default function Home() {
-    getServerSideProps();
+    // getServerSideProps();
     return (
         <div>
             <Header />
