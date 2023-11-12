@@ -1,3 +1,4 @@
+"use client"
 import BarChart from "@/screens/graph/BarChart";
 import LineChart from "@/screens/graph/LineChart";
 import Spark from "@/screens/graph/Spark";
