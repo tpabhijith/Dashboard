@@ -37,6 +37,7 @@ const HomeScreen = () => {
         width: 600,
         bgcolor: "background.paper",
         border: "2px solid #000",
+        borderRadius: "8px",
         boxShadow: 24,
         p: 4,
     };
@@ -58,10 +59,12 @@ const HomeScreen = () => {
                             <>
                                 <div className="widget">
                                     <div className="left">
-                                        <div className="image-container">
+                                        {/* <div className="image-container">
                                             <h3>Image</h3>
-                                        </div>
-                                        <h4>{item?.name}</h4>
+                                        </div> */}
+                                        <h4 className="dashboardName">
+                                            {item?.name}
+                                        </h4>
                                     </div>
                                     <div className="right">
                                         <button
@@ -98,15 +101,35 @@ const HomeScreen = () => {
                     aria-describedby="modal-modal-description"
                 >
                     <Box sx={style}>
-                        <p>Are you sure you want to delete this item</p>
-                        <Button
-                            onClick={() => {
-                                deleteDashboard(selectedId), handleClose();
+                        <p style={{ fontWeight: "500" }}>
+                            Are you sure you want to delete this item?
+                        </p>
+                        <div
+                            style={{
+                                display: "flex",
+                                justifyContent: "center",
+                                marginTop: "2rem",
+                                gap: "1rem",
                             }}
                         >
-                            Yes
-                        </Button>
-                        <Button onClick={() => router.push(`/`)}>No</Button>
+                            <Button
+                                variant="outlined"
+                                color="success"
+                                className="mr-4"
+                                onClick={() => {
+                                    deleteDashboard(selectedId), handleClose();
+                                }}
+                            >
+                                Yes
+                            </Button>
+                            <Button
+                                variant="outlined"
+                                color="error"
+                                onClick={() => handleClose()}
+                            >
+                                No
+                            </Button>
+                        </div>
                     </Box>
                 </Modal>
             }

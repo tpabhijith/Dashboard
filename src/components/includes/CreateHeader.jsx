@@ -42,14 +42,25 @@ const CreateHeader = ({ dashData, handleSave, setDashData }) => {
                     />
                 </Box>
                 {/* )} */}
-                <Button
-                    variant="contained"
-                    onClick={() => {
-                        handleSave(), router.push(`/`);
-                    }}
-                >
-                    Save
-                </Button>
+                <div>
+                    <Button
+                        variant="outlined"
+                        style={{ marginRight: "2rem" }}
+                        onClick={() => {
+                            router.push(`/`);
+                        }}
+                    >
+                        Back to Home
+                    </Button>
+                    <Button
+                        variant="contained"
+                        onClick={() => {
+                            handleSave(), router.push(`/`);
+                        }}
+                    >
+                        Save
+                    </Button>
+                </div>
             </Box>
         </Box>
     );
